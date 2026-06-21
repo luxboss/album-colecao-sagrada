@@ -64,6 +64,16 @@
       display: block;
       aspect-ratio: 1200 / 850;
     }
+    @media (max-width: 767px) {
+      .hero-banner-image {
+        min-height: 255px; /* Evita CLS no mobile definindo altura mínima baseada no aspect-ratio em telas menores */
+      }
+    }
+    @media (min-width: 768px) {
+      .hero-banner-image {
+        min-height: 480px; /* Evita CLS em telas maiores */
+      }
+    }
     .album-banner-image {
       width: 100%;
       height: auto;
