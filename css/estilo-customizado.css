@@ -1,0 +1,198 @@
+.sticker-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  background: transparent; 
+  padding: 10px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  pointer-events: none; 
+}
+.sticker-marquee-content {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  animation: carrosselInfinito 80s linear infinite; 
+}
+.sticker-group {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  gap: 35px;
+  padding-right: 35px;
+}
+.sticker-group img {
+  height: 180px !important; 
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(2px 6px 12px rgba(0,0,0,0.15));
+  border: 2.5px solid #fff3a8; /* Borda dourada brilhante fina */
+  border-radius: 8px; /* Cantos arredondados na figurinha */
+  animation: stickerGlowPulse 3s ease-in-out infinite; /* Efeito pulsante individual */
+  transition: transform 0.3s ease;
+  pointer-events: auto; /* Permite interações de mouse como hover */
+}
+.sticker-group img:hover {
+  transform: scale(1.05); /* Aumenta levemente de tamanho */
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .sticker-group img {
+    height: 220px !important; 
+    width: 220px !important;
+  }
+}
+@keyframes carrosselInfinito {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Moldura pulsante premium para a imagem central do mockup do álbum */
+.album-banner-image {
+  border: 3.5px solid #fff3a8;
+  border-radius: 12px; /* Mantém os cantos levemente arredondados e elegantes */
+  display: block;
+  margin: 0 auto; /* Garante que continue centralizada */
+  animation: bannerGlowPulse 3s ease-in-out infinite;
+}
+
+@keyframes bannerGlowPulse {
+  0% {
+    box-shadow: 0 0 15px #ffd700, 0 0 30px #ffa500;
+  }
+  50% {
+    box-shadow: 0 0 35px #fff3a8, 0 0 70px #ff8c00;
+  }
+  100% {
+    box-shadow: 0 0 15px #ffd700, 0 0 30px #ffa500;
+  }
+}
+
+/* Animação do pulso de luz dourada para as figurinhas */
+@keyframes stickerGlowPulse {
+  0% {
+    box-shadow: 
+      0 0 10px #ffd700, 
+      0 0 20px #ffa500, 
+      inset 0 0 8px #ffd700;
+  }
+  50% {
+    box-shadow: 
+      0 0 20px #fff3a8, 
+      0 0 40px #ff8c00, 
+      inset 0 0 12px #ffffff; /* Brilho máximo no meio do pulso */
+  }
+  100% {
+    box-shadow: 
+      0 0 10px #ffd700, 
+      0 0 20px #ffa500, 
+      inset 0 0 8px #ffd700;
+  }
+}
+
+/* Estilo para a imagem de abertura do topo */
+.hero-banner-image {
+  border: 3.5px solid #fff3a8;
+  border-radius: 16px; /* Cantos arredondados combinando com o design */
+  display: block;
+  margin: 0 auto; /* Mantém a imagem perfeitamente centralizada */
+  animation: heroGlowPulse 3s ease-in-out infinite; /* Efeito pulsante de abertura */
+}
+
+/* Animação do pulso de luz para o banner de entrada */
+@keyframes heroGlowPulse {
+  0% {
+    box-shadow: 0 0 20px #ffd700, 0 0 40px #ffa500;
+  }
+  50% {
+    box-shadow: 0 0 40px #fff3a8, 0 0 80px #ff8c00; /* Brilho máximo bem imponente */
+  }
+  100% {
+    box-shadow: 0 0 20px #ffd700, 0 0 40px #ffa500;
+  }
+}
+
+/* Elemento do preço à vista com verde neon */
+.price-value {
+  color: #39ff14 !important; /* Verde Neon puro e brilhante */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+     0px  2px 5px rgba(0, 0, 0, 0.5); /* Sombra de profundidade para soltar o texto do fundo */
+}
+
+/* Classe do botão de compra pulsante */
+.cta-button {
+  animation: buttonPulse 2s infinite ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+/* Animação de pulso para o botão */
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(111, 66, 233, 0.4);
+  }
+  50% {
+    transform: scale(1.04); /* Cresce levemente */
+    box-shadow: 0 6px 25px rgba(111, 66, 233, 0.7); /* O brilho roxo expande */
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(111, 66, 233, 0.4);
+  }
+}
+
+/* Ativa a rolagem suave na página inteira */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Centraliza o container do botão e define margens */
+.scroll-btn-container {
+  text-align: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+/* Estilo do botão idêntico e pulsante */
+.scroll-to-offer-btn {
+  display: inline-block;
+  background-color: #7b42f6; /* Cor roxa padrão */
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 45px;
+  border-radius: 50px; /* Mantém as pontas totalmente arredondadas */
+  
+  /* Ativa o efeito pulsante idêntico ao outro botão */
+  animation: buttonPulse 2s infinite ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scroll-to-offer-btn:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* Ajuste para o tamanho das figurinhas no celular */
+@media (max-width: 768px) {
+  /* Se for um carrossel/slider, fazemos cada item ocupar muito mais espaço na tela */
+  .carousel-item, .swiper-slide, .card-figurinha { 
+    width: 70% !important; /* Faz a figurinha ocupar quase a largura inteira da tela, dobrando de tamanho */
+    margin: 0 auto;
+  }
+
+  /* Garante que a imagem cresça proporcionalmente dentro do container */
+  .carousel-item img, .swiper-slide img, .card-figurinha img {
+    width: 100% !important;
+    height: auto !important;
+    transform: scale(1); /* Mantém a proporção limpa */
+  }
+}

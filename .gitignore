@@ -1,0 +1,10 @@
+# Ignorar pastas de backup originais que não são necessárias no site de produção
+_backup_originais/
+
+# Ignorar configurações do Netlify (o deploy será feito na Vercel)
+.netlify/
+
+# Arquivos de sistema do SO
+Thumbs.db
+Desktop.ini
+.DS_Store
